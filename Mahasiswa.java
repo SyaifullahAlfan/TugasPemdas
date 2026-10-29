@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package arrayMultidimensi;
+
+/**
+ *
+ * @author HP
+ */
+public class Mahasiswa {
+
+    public static void main(String[] args) {
+        String[][][] mahasiswa = {
+            {
+                {"Aa", "Bb", "Cc", "Dd", "Ee"},
+                {"Ff", "Gg", "Hh", "Ii", "Jj"},
+                {"Kk", "Ll", "Mm", "Nn", "Oo"}
+            },
+            {
+                {"Pp", "Rr", "Ss", "Tt", "Uu"},
+                {"V", "Ww", "yy", "Zz", "A"},
+                {"B", "C", "D", "E", "F"}
+            },
+            {
+                {"G", "H", "I", "J", "K"},
+                {"L", "M", "N", "O", "P"},
+                {"Q", "R", "S", "T", "U"}
+            }
+        };
+
+        String[] prodi = {
+            "Teknik Informatika",
+            "Sistem Informasi",
+            "Manajemen"
+        };
+
+        // Menampilkan data mahasiswa
+        for (int i = 0; i < mahasiswa.length; i++) {
+
+            System.out.println("\nProgram Studi: " + prodi[i]);
+
+            for (int j = 0; j < mahasiswa[i].length; j++) {
+
+                System.out.println("  Kelas " + (char) ('A' + j) + ":");
+
+                for (int k = 0; k < mahasiswa[i][j].length; k++) {
+
+                    System.out.println(
+                        " " + (k + 1)
+                        + " " + mahasiswa[i][j][k]
+                    );
+                }
+            }
+        }
+
+        System.out.println("\nTotal mahasiswa: "
+                + (mahasiswa.length
+                * mahasiswa[0].length
+                * mahasiswa[0][0].length));
+      }
+      
+    }
